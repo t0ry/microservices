@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 
 //@FeignClient(name="curency-exchange-service")
-@FeignClient(name="curency-exchange-service")
-@RibbonClient(name="zuul-gateway")
+@FeignClient(name="zuul-gateway")
+@RibbonClient(name="curency-exchange-service")
 public interface CurrencyExchangeServiceProxy {
 	//@GetMapping("/{service-name}/{api-uri}")
 	@GetMapping("/curency-exchange-service/currency-exchange/from/{from}/to/{to}")
